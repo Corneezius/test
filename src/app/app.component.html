@@ -1,0 +1,830 @@
+<header class="header">
+    <img src="../../assets/icon-32.png" class="image">
+    <h3>Financial Affidavit (OK)</h3>
+</header>
+<main>
+    <!-- <button type="button" (click)="CreateNewDocument($event)">Test</button> -->
+    <div class="accordion" id="accordionSection">
+        <div class="card">
+            <div class="card-header" id="CaseInformation">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#caseInfoArea" aria-expanded="true" aria-controls="caseInfoArea">
+                        CASE INFORMATION
+                    </button>
+                </h5>
+            </div>
+            <div id="caseInfoArea" class="collapse show" aria-labelledby="CaseInformation" data-parent="#accordionSection">
+                <div class="card-body form-group">
+                    <div class="row">
+                        <div class="col form-group">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="CourtFor" class="inline-label">Court:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" id="CourtFor" name="CourtFor" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col form-group">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="CountyFor">County:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" id="CountyFor" name="CountyFor" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col form-group">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="StateOf">State:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" id="StateOf" name="StateOf" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col form-group">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="CaseNo">Case No:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" id="CaseNo" name="CaseNo" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col form-group">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="Division">Division:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" id="Division" name="Division" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col form-group">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="Petitioner">Petitioner:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" id="Petitioner" name="Petitioner" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col form-group">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="Respondent">Respondent:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" id="Respondent" name="Respondent" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>        
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="Employment">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#employmentArea" aria-expanded="false" aria-controls="employmentArea">
+                        EMPLOYMENT INFORMATION
+                    </button>
+                </h5>
+            </div>
+            <div id="employmentArea" class="collapse" aria-labelledby="EmploymentAndIncome" data-parent="#accordionSection">
+                <div class="card-body form-group">
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="Occupation">Occupation:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" id="Occupation" name="Occupation" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="Employedby">Employed By:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" id="Employedby" name="EmployedBy" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="Address">Address:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" id="Address" name="Address" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="SSN">SSN:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" id="SSN" name="SSN" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="DOB">Date of Birth:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="date" id="DOB" name="DOB" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="PayPeriod">Pay Period:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" id="PayPeriod" name="PayPeriod" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="RateOfPay">Rate of Pay:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" placeholder="$0" id="RateOfpay" name="RateOfPay" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="Expecting">Expecting soon to become unemployed or change jobs? Explain.</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" placeholder="?" id="Expecting" name="Expecting" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="Employment">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#monthlyIncome" aria-expanded="false" aria-controls="monthlyIncome">
+                        TOTAL MONTHLY INCOME
+                    </button>
+                </h5>
+            </div>
+            <div id="monthlyIncome" class="collapse" aria-labelledby="monthlyIncome" data-parent="#accordionSection">
+                <div class="card-body form-group">
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="businessIncome">Gross Business income:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" value="0" placeholder="$0" id="businessIncome" name="businessIncome" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="disability">Disability benefits:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" value="0" placeholder="$0" id="disability" name="disability" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="workerComp">Workers’ Compensation:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" value="0" placeholder="$0" id="workerComp" name="workerComp" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="unemploymentComp">Unemployment Compensation:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="number" value="0" placeholder="$0" id="unemploymentComp" name="unemploymentComp" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="pension">Pension, Retirement or Annuity payments:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" value="0" placeholder="$0" id="pension" name="pension" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="ssbenefits">Social Security benefits:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" value="0" placeholder="$0" id="ssbenefits" name="ssbenefits" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="spousal">Spousal Support From Previous Marriage:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" value="0" placeholder="$0" id="spousal" name="spousal" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="interest">Interest and dividends:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" value="0" placeholder="$0" id="interest" name="interest" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="royalties">Income from royalties, trusts or estates:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" value="0" placeholder="$0" id="royalties" name="royalties" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="reimbursed">Rembursed Expenses:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" value="0" placeholder="$0" id="reimbursed" name="reimbursed" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="rental">Rental Income:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" value="0" placeholder="$0" id="rental" name="rental" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="gains">Gains from property:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" value="0" placeholder="$0" id="gains" name="gains" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="recurring">Any other income of a recurring nature:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" value="0" placeholder="$0" id="recurring" name="recurring" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="expenses">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#expensesArea" aria-expanded="false" aria-controls="expensesArea">
+                        DEDUCTIONS & EXPENSES
+                    </button>
+                </h5>
+            </div> 
+        </div>
+        <div id="expensesArea" class="collapse" aria-labelledby="expensesArea" data-parent="#accordionSection">
+                <div class="card-body form-group">
+                    <p class="divider">Deductions</p>
+                    <br />   
+                    <div class="row">
+                        <div class="col">
+                            <div class='row'>
+                                <div class="col-6">
+                                    <label for="federalTaxes">Federal, State and Local Income Taxes:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" value="0" placeholder="$0" id="federalTaxes" name="federalTaxes" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                        <label for="union">Mandatory Union Dues:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" value="0" placeholder="$0" id="union" name="union" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="retirement">Mandatory Retirement:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" value="0" placeholder="$0" id="retirement" name="retirement" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="healthInsurance">Health insurance payments
+                                        paid for children:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" value="0" placeholder="$0" id="healthInsurance" name="healthInsurance" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="fica">Fica or Self employment tax:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" value="0" placeholder="$0" id="fica" name="fica" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <br />
+                    <p class="divider">Expenses</p>
+                    <br />   
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="mortgage">Mortgage:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="number" value="0" id="mortgage" name="mortgage" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="property">Property taxes:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" value="0" id="property" name="property" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="insuranceExpense">Insurance:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" value="0" id="insuranceExpense" name="insuranceExpense" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="electricity">Electricity:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" value ="0" id="electricity" name="electricity" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="waste">Waste, garbage:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" value="0" id="waste" name="waste" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="telephone">Telephone:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" value = "0" id="telephone" name="telephone" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="fuel">Fuel:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" value = "0" id="fuel" name="fuel" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="barber">Barber/beauty parlor:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" value= "0" id="barber" name="barber" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="cosmetics">Cosmetics:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" value ="0" id="cosmetics" name="cosmetics" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="holiday">Holiday Gifts:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" value="0" id="holiday" name="holiday" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="other">Other Expenses:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" value ="0" id="other" name="other" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <br />
+                </div>
+            </div>
+        
+        <div class="card">
+            <div class="card-header" id="assetts">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#assettsArea" aria-expanded="false" aria-controls="assettsArea">
+                        ASSETTS & LIABILITIES
+                    </button>
+                </h5>
+            </div>
+        </div>
+        <div id="assettsArea" class="collapse" aria-labelledby="assettsArea" data-parent="#accordionSection">
+                <div class="card-body form-group">
+                    <p class="divider">Assets</p>
+                    <br />   
+                    <table>
+                        <tr>
+                            <th>Description</th>
+                            <th>Petitioner</th>
+                            <th>Respondent</th>
+                        </tr>
+                        <tr class="bottom">
+                            <td>Cash on Hand:</td>
+                            <td> <input type="text" value="0" id="cashHandPetitioner" name="cashHandPetitioner" (change)="inputChanged($event)" class="form-control form-control-sm"></td>
+                            <td> <input type="text" value="0" id="cashHandRespondent" name="cashHandRespondent" (change)="inputChanged($event)" class="form-control form-control-sm"></td>
+                        </tr>
+                        <br />
+                        <tr class="bottom">
+                            <td>Cash in Bank:</td>
+                            <td> <input type="text" value="0" id="cashBankPetitioner" name="cashBankPetitioner" (change)="inputChanged($event)" class="form-control form-control-sm"></td>
+                            <td> <input type="text" value="0" id="cashBankRespondent" name="cashBankRespondent" (change)="inputChanged($event)" class="form-control form-control-sm"></td>
+                        </tr>
+                        <br />
+                        <tr class="bottom">
+                            <td>Stocks:</td>
+                            <td> <input type="text" value="0" id="stocksPetitioner" name="stocksPetitioner" (change)="inputChanged($event)" class="form-control form-control-sm"></td>
+                            <td> <input type="text" value="0" id="stocksRespondent" name="stocksRespondent" (change)="inputChanged($event)" class="form-control form-control-sm"></td>
+                        </tr>
+                        <tr>
+                            <td>Notes:</td>
+                            <td> <input type="text" value="0" id="notesPetitioner" name="notesPetitioner" (change)="inputChanged($event)" class="form-control form-control-sm"></td>
+                            <td> <input type="text" value="0" id="notesRespondent" name="notesRespondent" (change)="inputChanged($event)" class="form-control form-control-sm"></td>
+                        </tr>
+                        <tr>
+                            <td>Real Estate:</td>
+                            <td> <input type="text" value="0" id="realEstatePetitioner" name="realEstatePetitioner" (change)="inputChanged($event)" class="form-control form-control-sm"></td>
+                            <td> <input type="text" value="0" id="realEstateRespondent" name="realEstateRespondent" (change)="inputChanged($event)" class="form-control form-control-sm"></td>
+                        </tr>
+                        <tr>
+                            <td>Estate home:</td>
+                            <td> <input type="text" value="0" id="estateHomePetitioner" name="estateHomePetitioner" (change)="inputChanged($event)" class="form-control form-control-sm"></td>
+                            <td> <input type="text" value="0" id="estateHomeRespondent" name="estateHomeRespondent" (change)="inputChanged($event)" class="form-control form-control-sm"></td>
+                        </tr>
+                        <tr>
+                            <td>Cars:</td>
+                            <td> <input type="text" value="0" id="carsPetitioner" name="carsPetitioner" (change)="inputChanged($event)" class="form-control form-control-sm"></td>
+                            <td> <input type="text" value="0" id="carsRespondent" name="carsRespondent" (change)="inputChanged($event)" class="form-control form-control-sm"></td>
+                        </tr>
+                        <tr>
+                            <td>Contents of Home:</td>
+                            <td> <input type="text" value="0" id="contentsHomePetitioner" name="contentsHomePetitioner" (change)="inputChanged($event)" class="form-control form-control-sm"></td>
+                            <td> <input type="text" value="0" id="contentsHomeRespondent" name="contentsHomeRespondent" (change)="inputChanged($event)" class="form-control form-control-sm"></td>
+                        </tr>
+                        <tr>
+                            <td>Jewelry:</td>
+                            <td> <input type="text" value="0" id="jewelryPetitioner" name="jewelryPetitioner" (change)="inputChanged($event)" class="form-control form-control-sm"></td>
+                            <td> <input type="text" value="0" id="jewelryRespondent" name="jewelryRespondent" (change)="inputChanged($event)" class="form-control form-control-sm"></td>
+                        </tr>
+                        <tr>
+                            <td>Life insurance:</td>
+                            <td> <input type="text" value="0" id="lifePetitioner" name="lifePetitioner" (change)="inputChanged($event)" class="form-control form-control-sm"></td>
+                            <td> <input type="text" value="0" id="lifeRespondent" name="lifeRespondent" (change)="inputChanged($event)" class="form-control form-control-sm"></td>
+                        </tr>
+                        <tr>
+                            <td>Other:</td>
+                            <td> <input type="text" value="0" id="otherAssetPetitioner" name="otherAssetPetitioner" (change)="inputChanged($event)" class="form-control form-control-sm"></td>
+                            <td> <input type="text" value="0" id="otherAssetRespondent" name="otherAssetRespondent" (change)="inputChanged($event)" class="form-control form-control-sm"></td>
+                        </tr>
+                    </table>
+                    <p class="divider">Liabilities</p>
+                    <br />                    
+                    <table>
+                        <tr>
+                            <th>Description</th>
+                            <th>Petitioner</th>
+                            <th>Respondent</th>
+                        </tr>
+                        <tr>
+                            <td>Creditor Debt:</td>
+                            <td> <input type="text" value="0" id="creditorPetitioner" name="creditorPetitioner" (change)="inputChanged($event)" class="form-control form-control-sm"></td>
+                            <td> <input type="text" value="0" id="creditorRespondent" name="creditorRespondent" (change)="inputChanged($event)" class="form-control form-control-sm"></td>
+                        </tr>
+                        <tr>
+                            <td>Security:</td>
+                            <td> <input type="text" value="0" id="securityPetitioner" name="securityPetitioner" (change)="inputChanged($event)" class="form-control form-control-sm"></td>
+                            <td> <input type="text" value="0" id="securityRespondent" name="securityRespondent" (change)="inputChanged($event)" class="form-control form-control-sm"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        
+        <div class="card">
+            <div class="card-header" id="signature">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#signatureArea" aria-expanded="false" aria-controls="signatureArea">
+                        SIGNATURES
+                    </button>
+                </h5>
+            </div>
+            <div id="signatureArea" class="collapse" aria-labelledby="signatureArea" data-parent="#accordionSection">
+                    <div class="card-body form-group">
+                        <div class="row">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label for="occupation">Signature:</label>
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="text" id="signature" name="signatureArea" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                        <br />
+                        <div class="row">
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <label for="year">Year:</label>
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="text" id="year" name="year" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+                            <br />
+                            <div class="row">
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label for="nonLawyer">Non-lawyer Name:</label>
+                                            </div>
+                                            <div class="col-6">
+                                                <input type="text" id="nonLawyer" name="nonLawyer" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                            </div>
+                                        </div>
+                                    </div>    
+                            </div>
+                            <br />
+                            <div class="row">
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label for="street">Street:</label>
+                                            </div>
+                                            <div class="col-6">
+                                                <input type="text" id="street" name="street" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                            </div>
+                                        </div>
+                                    </div>    
+                            </div>
+                            <br />
+                            <div class="row">
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label for="city">City:</label>
+                                            </div>
+                                            <div class="col-6">
+                                                <input type="text" id="city" name="city" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                            </div>
+                                        </div>
+                                    </div>    
+                            </div>
+                            <br />
+                            <div class="row">
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label for="state">State:</label>
+                                            </div>
+                                            <div class="col-6">
+                                                <input type="text" id="state" name="state" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                            </div>
+                                        </div>
+                                    </div>    
+                            </div>
+                            <br />
+                            <div class="row">
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label for="phoneSig">Phone:</label>
+                                            </div>
+                                            <div class="col-6">
+                                                <input type="text" id="phoneSig" name="phoneSig" (change)="inputChanged($event)" class="form-control form-control-sm">
+                                            </div>
+                                        </div>
+                                    </div>    
+                            </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</main>
+
